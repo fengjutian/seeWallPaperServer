@@ -15,7 +15,6 @@ class HomeService extends Service {
     // })
 
     // return filesList;
-
     // const fsImg = await fs.readFileSync('./public/assets/');
     // console.log(888, fsImg);
     return '333';
