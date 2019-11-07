@@ -19,6 +19,7 @@ class HomeService extends Service {
 
     var result = await this.app.mongo.find("imgList");
     console.log(89, result)
+    //var result = await this.app.mongoose.find("imgList");
 
     return result;
   }
