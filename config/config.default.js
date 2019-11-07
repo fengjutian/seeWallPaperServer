@@ -47,6 +47,17 @@ module.exports = appInfo => {
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
   };
 
+  config.mongo = {
+    client: {
+      host: '127.0.0.1',
+      port: '27017',
+      name: 'imgList',
+      user: '',
+      password: '',
+      options: {},
+    },
+  };
+
   return {
     ...config,
     ...userConfig,

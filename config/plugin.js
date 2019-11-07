@@ -7,9 +7,14 @@ module.exports = {
   //   enable: true,
   // }
 
+  mongo: {
+    enable: true,
+    package: 'egg-mongo-native',
+  },
+
   cors: {
     enable: true,
-    package: 'egg-cors'
-  }
+    package: 'egg-cors',
+  },
 };
 

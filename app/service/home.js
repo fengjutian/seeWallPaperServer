@@ -5,7 +5,7 @@ class HomeService extends Service {
   async getImgList() {
     let filesList = [];
     const imgUrl = 'app/public/assets/';
-    const curImg = 'http://127.0.0.1:7002/' + 'static/assets/';
+    const curImg = 'http://127.0.0.1:7001/' + 'static/assets/';
     let files = fs.readdirSync(imgUrl);
     files.forEach(function(itm, index) {
     // let stat = fs.statSync(imgUrl + itm);
@@ -16,7 +16,11 @@ class HomeService extends Service {
     // obj.stat = stat;
       filesList.push(obj);
     })
-    return filesList;
+
+    var result = await this.app.mongo.find("imgList");
+    console.log(89, result)
+
+    return result;
   }
 }
 
